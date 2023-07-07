@@ -71,7 +71,7 @@ end)
 local creditsTable = {
     "Discord: softcare#0",
 	"Github: FUFUGUA",
-	"GUI Library: https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3"
+	"Credits for GUI library: Github: bloodball"
 }
 folder2:Dropdown("Credits", creditsTable, true, function()
 	warn""
