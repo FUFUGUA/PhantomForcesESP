@@ -1,9 +1,16 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local window = Library.CreateLib("ESP by FUFUGUA (AKA softcare)", "BloodTheme")
+local window = Library.CreateLib("ESP by FUFUGUA (AKA softcare)         Toggle UI = F", "BloodTheme")
 
 local EspTab = window:NewTab("ESP")
 local EspSection = EspTab:NewSection("Esp")
 local ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/FUFUGUA/PhantomForcesESP/main/ESPPHANTOMFORCES.lua"))()
+local settingsTab = window:NewTab("Settings")
+local settingsSection = settingsTab:NewSection("Settings")
+
+
+settingsSection:NewKeybind("Toggle UI", "Toggle UI on and off, visible/not visible", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
 
 ESP.Boxes = false
 ESP.Names = false
@@ -69,12 +76,12 @@ EspSection:NewToggle("Distance", "Blud what info do you need for this :skull:", 
     end
 end)
 
-EspSection:NewButton("Rejoin", "Rejoins server", function()
+settingsSection:NewButton("Rejoin", "Rejoins server", function()
 	local ts = game:GetService("TeleportService")
 	local p = game:GetService("Players").LocalPlayer
 	ts:Teleport(game.PlaceId, p)
 end)
-EspSection:NewSlider("FPS capacity", "FPS", 300, 10, function(v)
+settingsSection:NewSlider("FPS capacity", "FPS", 300, 10, function(v)
 	setfpscap(v)
 end)
 
