@@ -63,7 +63,7 @@ if v then
 		ESP.Names = false
 	end
 end)
-Button("Rejoin Server", function()
+window:Button("Rejoin Server", function()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
     ts:Teleport(game.PlaceId, p)
@@ -76,7 +76,7 @@ end)
 --folder2:Dropdown("Credits", creditsTable, true, function()
 --	warn""
 --end)
-Slider("FPS Capacity",{
+window:Slider("FPS Capacity",{
     min = 10;
     max = 300;
     precise = false;
