@@ -4,7 +4,7 @@ ESP.Boxes = false
 ESP.Names = false
 local window = library:CreateWindow("Phantom Forces")
 local folder1 = window:CreateFolder("ESP")
-local folder2 = window:CreateFolder("Misc")
+--local folder2 = window:CreateFolder("Misc")
 local Ghosts = game.Workspace.Players['Bright orange']
 local Phantoms = game.Workspace.Players['Bright blue']
 ESP:AddObjectListener(Ghosts, {
@@ -63,20 +63,20 @@ if v then
 		ESP.Names = false
 	end
 end)
-folder2:Button("Rejoin Server", function()
+Button("Rejoin Server", function()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
     ts:Teleport(game.PlaceId, p)
 end)
-local creditsTable = {
-    "Discord: softcare#0",
-	"Github: FUFUGUA",
-	"Credits for GUI library: Github: bloodball"
-}
-folder2:Dropdown("Credits", creditsTable, true, function()
-	warn""
-end)
-folder2:Slider("FPS Capacity",{
+--local creditsTable = {
+--    "Discord: softcare#0",
+--	"Github: FUFUGUA",
+--	"Credits for GUI library: Github: bloodball"
+--}
+--folder2:Dropdown("Credits", creditsTable, true, function()
+--	warn""
+--end)
+Slider("FPS Capacity",{
     min = 10;
     max = 300;
     precise = false;
