@@ -69,9 +69,8 @@ folder2:Button("Rejoin Server", function()
     ts:Teleport(game.PlaceId, p)
 end)
 local creditsTable = {
-    "UI: Discord: softcare#0",
-    "ESP: Discord: softcare#0",
-    "Script: ZekGT",
+    "Discord: softcare#0",
+	"Github: FUFUGUA",
 }
 folder2:Dropdown("Credits", creditsTable, true, function()
 	warn""
